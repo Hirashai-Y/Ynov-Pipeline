@@ -43,7 +43,7 @@ jobs:
 
       - name: Generate coverage as HTML
         run: |
-          pytest --cov=. . --doctest-modules --cov-report html:cov_html
+          pytest --cov=. --ignore bottle.py --doctest-modules --cov-report html:cov_html
           mkdir cov_html/assets/
           coverage-badge -o cov_html/assets/coverage.svg
 
